@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "start": "(npm start --prefix api &); npm start --prefix web"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+</head>
+<body>
+  <script>
+    // Authenticate
+    fetch("http://localhost:3000/login", {
+      headers: {
+        Authorization: `Basic ${btoa("admin" + ":" + "secret")}`,
+      },
+    }).then(() => {
+      // Retrieve this user's info from the API
+      // The browser should attach the Authorization header but it doesn't
+      fetch("http://localhost:3000/info", {
+        credentials: "include",
+      }).then(console.log);
+    });
+  </script>
+</body>
+</html>

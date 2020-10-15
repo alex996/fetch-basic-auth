@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "start": "serve -l 4000"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}
