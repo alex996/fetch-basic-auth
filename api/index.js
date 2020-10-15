@@ -4,7 +4,16 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(cors({ origin: 'http://localhost:4000', credentials: true }))
+app.use(cors({
+  // Access-Control-Allow-Origin: http://localhost:4000
+  origin: 'http://localhost:4000',
+  // Access-Control-Allow-Credentials: true
+  credentials: true,
+  // Reflects: Access-Control-Allow-Headers: authorization
+  // allowedHeaders: undefined,
+  // Default: Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+  // methods: undefined
+}))
 
 const auth = basicAuth({ users: { 'admin': 'secret' }/*, challenge: true*/ })
 
